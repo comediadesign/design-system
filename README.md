@@ -107,6 +107,7 @@ Every app keeps the same components, spacing and type. Only the overridden token
 
 ## Versions
 
+- **v0.4.1**: `PageHeader` keeps the title whole; the muted line truncates instead.
 - **v0.4.0**: `SuiteFrame` and `PageHeader` in `suite`: the suite's page layout (a shadcn sidebar, then a header with the 16px bold title, count, actions and the app switcher), as Mail's Outreach lays it out. `ui.css` carries Email's table rows (`.cm-rows`).
 - **v0.3.1**: "Patterns" in the app switcher is the Patterns product (comediadesign/patterns: comedia-patterns.vercel.app, localhost:3200), not the Samsung concept-prototypes gallery, which is a client project.
 - **v0.3.0**: shared components: the 20 shadcn components (`ui/*`), `cn()`, the mobile hook, and the suite's app switcher with its app list and icons (`suite`). `ui.css` for Tailwind.

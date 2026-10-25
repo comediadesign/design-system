@@ -43,10 +43,11 @@ export function PageHeader({ title, count, meta, actions, switcher }: {
   return (
     <header className="flex shrink-0 items-center gap-3 border-b px-3 py-4 md:px-6">
       <SidebarTrigger className="-ml-1 md:hidden" />
-      <h1 className="truncate text-[16px] font-bold">{title}</h1>
+      {/* The title keeps its width; the muted line is what gives way. */}
+      <h1 className="shrink-0 text-[16px] font-bold">{title}</h1>
       {count !== undefined && <span className="shrink-0 text-[16px] tabular-nums text-[var(--color-text-off)]">{count}</span>}
       <span className="flex-1" />
-      {meta && <span className="hidden max-w-[55%] truncate text-xs text-muted-foreground md:inline">{meta}</span>}
+      {meta && <span className="hidden min-w-0 truncate text-xs text-muted-foreground md:inline">{meta}</span>}
       {actions}
       {switcher}
     </header>
