@@ -1,4 +1,4 @@
-name: Tokens up to date
+name: Tokens up to date, components type-check
 on: [push, pull_request]
 jobs:
   check:
@@ -8,3 +8,5 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
       - run: node scripts/build.mjs --check
+      - run: npm ci --no-audit --no-fund
+      - run: npx tsc --noEmit

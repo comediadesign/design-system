@@ -1,6 +1,6 @@
 # Comedia design system
 
-One design system for the Comedia suite: Mail (with Outreach), Slides, Patterns and Builder. Change it here and every app picks it up on its next update.
+One design system for the Comedia suite: Mail (with Outreach), Slides, Patterns and Builder. Its tokens (colours, type, radii, shadows) and its shared components (the shadcn set and the suite's app switcher) live here. Change them here and every app picks them up on its next update.
 
 **Source of truth:** the Figma library **Comedia Suite Design System** ([file](https://www.figma.com/design/5WsKy0WS3ipkyWLLTkfZRG)). This repo turns its variables and styles into code. It holds no design decisions of its own.
 
@@ -50,6 +50,26 @@ Apps use the **tokens** (`--color-*`, `--radius-*`, `--shadow-*`, `--text-*`, `-
 | Slides | comediadesign/comedia-deck-system | `theme.css` in `src/app/globals.css`, before Slides' own `@theme` (its deck palette wins on shared names) |
 | Patterns, Builder | comediadesign/concept-prototypes (`suite/shared-ui`, `suite/demo-data`) | `vars.css` in `packages/suite-ui/src/tokens.css`, mapped onto the suite chrome's names |
 
+## Shared components
+
+The 20 shadcn components every app uses (`avatar`, `badge`, `button`, `card`, `checkbox`, `dialog`, `dropdown-menu`, `input`, `label`, `popover`, `scroll-area`, `select`, `separator`, `sheet`, `sidebar`, `skeleton`, `table`, `tabs`, `textarea`, `tooltip`), plus the suite's app switcher. They ship as TypeScript source, so they are styled by the tokens above and compiled by each app.
+
+```ts
+import { Button } from '@comedia/design-system/ui/button';
+import { AppSwitcher, suiteApps, PRODUCTION_URLS } from '@comedia/design-system/suite';
+import { cn } from '@comedia/design-system/lib/utils';
+```
+
+Each app also needs:
+
+- **Tailwind:** `@import "@comedia/design-system/ui.css";` after the theme, so Tailwind generates the classes these files use.
+- **Next.js:** `transpilePackages: ['@comedia/design-system']` in `next.config.ts`. Vite compiles it as is.
+- **Peer dependencies:** `react`, `radix-ui`, `class-variance-authority`, `clsx`, `tailwind-merge`, `lucide-react` (the apps already have them).
+
+`AppSwitcher` takes the app list and the signed-in email as props: `<AppSwitcher apps={suiteApps(urls)} email={email} current="mail" />`. Each app keeps a small wrapper that supplies its own addresses (from env) and session. `@comedia/design-system/suite/apps` has the list without the component, for server code such as middleware. The icons are built in as data URIs, so no app needs copies in `public/`.
+
+To change a component, edit it here, run `npx tsc --noEmit`, and release. App-specific components stay in the apps.
+
 ## Changing the design system
 
 1. Change the variables or styles in the Figma library, and publish the library so the design files get the change too.
@@ -86,6 +106,8 @@ Every app keeps the same components, spacing and type. Only the overridden token
 
 ## Versions
 
+- **v0.3.0**: shared components: the 20 shadcn components (`ui/*`), `cn()`, the mobile hook, and the suite's app switcher with its app list and icons (`suite`). `ui.css` for Tailwind.
+- **v0.2.1**: release dry run, no changes.
 - **v0.2.0**: `vars.css`, the tokens as namespaced `--cds-*` variables for apps with their own theme. `theme.css` is unchanged.
 - **v0.1.1**: tokens whose Figma code syntax is a plain value (radius `2px`, `40px`) are no longer emitted, so Tailwind's own `rounded-xs` is untouched.
 - **v0.1.0**: the tokens from Comedia Mail, matched one for one with Mail's previous `app/globals.css` theme. Mail is the first app on it.

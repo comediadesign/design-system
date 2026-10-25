@@ -1,0 +1,5 @@
+/* The shared components' Tailwind classes. @import this after "tailwindcss"
+   (and after theme.css or vars.css) in any app that uses @comedia/design-system/ui
+   or /suite, so Tailwind generates the classes those files use. */
+@source "./ui";
+@source "./suite";

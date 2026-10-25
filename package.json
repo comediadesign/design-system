@@ -1,8 +1,8 @@
 {
   "name": "@comedia/design-system",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "private": true,
-  "description": "The Comedia suite's design tokens (and later its shared UI), generated from the Comedia Suite Design System Figma library.",
+  "description": "The Comedia suite's design tokens and shared UI (shadcn components, the app switcher), generated from and kept in step with the Comedia Suite Design System Figma library.",
   "type": "module",
   "exports": {
     "./theme.css": {
@@ -13,24 +13,60 @@
       "style": "./dist/vars.css",
       "default": "./dist/vars.css"
     },
+    "./ui.css": {
+      "style": "./ui.css",
+      "default": "./ui.css"
+    },
     "./tokens": {
       "types": "./dist/tokens.d.ts",
       "default": "./dist/tokens.js"
     },
     "./tokens.json": "./dist/tokens.json",
+    "./ui/*": "./ui/*.tsx",
+    "./suite": "./suite/index.ts",
+    "./suite/apps": "./suite/apps.ts",
+    "./lib/utils": "./lib/utils.ts",
+    "./hooks/use-mobile": "./hooks/use-mobile.ts",
     "./package.json": "./package.json"
   },
   "files": [
     "dist",
     "tokens",
     "scripts",
+    "ui",
+    "suite",
+    "lib",
+    "hooks",
+    "ui.css",
     "README.md"
   ],
   "scripts": {
     "build": "node scripts/build.mjs",
-    "check": "node scripts/build.mjs --check"
+    "check": "node scripts/build.mjs --check",
+    "typecheck": "tsc --noEmit"
   },
   "engines": {
     "node": ">=20"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "radix-ui": "^1.8.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.7.0",
+    "lucide-react": "^1.57.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "radix-ui": "^1.8.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.7.0",
+    "lucide-react": "^1.57.0"
   }
 }
