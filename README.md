@@ -53,7 +53,7 @@ Apps use the **tokens** (`--color-*`, `--radius-*`, `--shadow-*`, `--text-*`, `-
 
 ## Shared components
 
-The 20 shadcn components every app uses (`avatar`, `badge`, `button`, `card`, `checkbox`, `dialog`, `dropdown-menu`, `input`, `label`, `popover`, `scroll-area`, `select`, `separator`, `sheet`, `sidebar`, `skeleton`, `table`, `tabs`, `textarea`, `tooltip`), plus the suite's app switcher. They ship as TypeScript source, so they are styled by the tokens above and compiled by each app.
+The 20 shadcn components every app uses (`avatar`, `badge`, `button`, `card`, `checkbox`, `dialog`, `dropdown-menu`, `input`, `label`, `popover`, `scroll-area`, `select`, `separator`, `sheet`, `sidebar`, `skeleton`, `table`, `tabs`, `textarea`, `tooltip`), plus the suite's app switcher and page frame (`SuiteFrame`, `PageHeader`: the sidebar-and-header layout Mail's Outreach uses). They ship as TypeScript source, so they are styled by the tokens above and compiled by each app.
 
 ```ts
 import { Button } from '@comedia/design-system/ui/button';
@@ -107,6 +107,7 @@ Every app keeps the same components, spacing and type. Only the overridden token
 
 ## Versions
 
+- **v0.4.0**: `SuiteFrame` and `PageHeader` in `suite`: the suite's page layout (a shadcn sidebar, then a header with the 16px bold title, count, actions and the app switcher), as Mail's Outreach lays it out. `ui.css` carries Email's table rows (`.cm-rows`).
 - **v0.3.1**: "Patterns" in the app switcher is the Patterns product (comediadesign/patterns: comedia-patterns.vercel.app, localhost:3200), not the Samsung concept-prototypes gallery, which is a client project.
 - **v0.3.0**: shared components: the 20 shadcn components (`ui/*`), `cn()`, the mobile hook, and the suite's app switcher with its app list and icons (`suite`). `ui.css` for Tailwind.
 - **v0.2.1**: release dry run, no changes.

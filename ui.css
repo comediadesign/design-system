@@ -3,3 +3,18 @@
    or /suite, so Tailwind generates the classes those files use. */
 @source "./ui";
 @source "./suite";
+
+/* ── Email's list rows, for tables (Outreach) ───────────────────────────────
+   The inbox row: 40px, 2px corners, 1px apart. A row that needs you
+   (data-needs) is bold white on a 3% band; the rest are Light Grey and flat;
+   hover and selection lift to 10%. Headers are quiet 12px Grey. */
+.cm-rows { border-collapse: separate; border-spacing: 0 1px; }
+.cm-rows tr { border-bottom-width: 0; }
+.cm-rows thead th { height: 36px; font-size: 12px; font-weight: 400; color: var(--color-text-off); }
+.cm-rows tbody td { height: 40px; padding-top: 0; padding-bottom: 0; font-size: 14px; color: var(--color-text-mid); }
+.cm-rows tbody td:first-child { border-radius: 2px 0 0 2px; }
+.cm-rows tbody td:last-child  { border-radius: 0 2px 2px 0; }
+.cm-rows tbody tr[data-needs] td { background: var(--color-row-unread); color: var(--color-text-hi); font-weight: 700; }
+.cm-rows tbody tr:hover td,
+.cm-rows tbody tr[data-state="selected"] td { background: var(--color-row-focus); }
+.cm-rows tbody tr:hover { background: transparent; }
