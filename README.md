@@ -12,6 +12,7 @@ One design system for the Comedia suite: Mail (with Outreach), Slides, Patterns 
 | `scripts/figma-export.js` | The Figma script that produces that export. |
 | `scripts/build.mjs` | Turns the export into `dist/`. |
 | `dist/theme.css` | The Tailwind v4 theme: colours, radii, fonts, shadows and text styles. |
+| `dist/vars.css` | The same tokens as plain `--cds-*` variables (no Tailwind utilities), for apps with a theme of their own. |
 | `dist/tokens.js` | The same values for JavaScript (`tokens`, `cssVar`, `apps`). |
 | `dist/tokens.json` | Resolved values for anything else. |
 
@@ -20,7 +21,7 @@ One design system for the Comedia suite: Mail (with Outreach), Slides, Patterns 
 ## Using it in an app
 
 ```bash
-npm install "@comedia/design-system@https://codeload.github.com/comediadesign/design-system/tar.gz/refs/tags/v0.1.1"
+npm install "@comedia/design-system@https://codeload.github.com/comediadesign/design-system/tar.gz/refs/tags/v0.2.0"
 ```
 
 Use the release download (https), not `github:…`: npm records that as a git+ssh address, which Vercel's build can't fetch.
@@ -32,6 +33,12 @@ Use the release download (https), not `github:…`: npm records that as a git+ss
 ```
 
 That gives every token as a CSS variable and a Tailwind utility: `bg-panel`, `text-text-mid`, `border-border-subtle`, `rounded-pill`, `shadow-panel`, `text-body-small`, `font-sans`. In inline styles, use `var(--color-panel)`, or `cssVar['color-panel']` from `@comedia/design-system/tokens`.
+
+**Apps with their own theme** (Patterns, whose prototypes have their own `--color-*` palette) import `vars.css` instead and map what their suite chrome needs: `--sc-background: var(--cds-color-panel)`. The `--cds-` prefix means nothing collides with the app's own names.
+
+```css
+@import "@comedia/design-system/vars.css";
+```
 
 Apps use the **tokens** (`--color-*`, `--radius-*`, `--shadow-*`, `--text-*`, `--font-*`), never the `--palette-*` colours underneath. That's what lets a theme swap the palette without touching components.
 
@@ -57,5 +64,6 @@ Every app keeps the same components, spacing and type. Only the overridden token
 
 ## Versions
 
+- **v0.2.0**: `vars.css`, the tokens as namespaced `--cds-*` variables for apps with their own theme. `theme.css` is unchanged.
 - **v0.1.1**: tokens whose Figma code syntax is a plain value (radius `2px`, `40px`) are no longer emitted, so Tailwind's own `rounded-xs` is untouched.
 - **v0.1.0**: the tokens from Comedia Mail, matched one for one with Mail's previous `app/globals.css` theme. Mail is the first app on it.
