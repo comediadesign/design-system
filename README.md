@@ -41,7 +41,7 @@ Apps use the **tokens** (`--color-*`, `--radius-*`, `--shadow-*`, `--text-*`, `-
 4. Commit, tag a new version (`v0.2.0`), push.
 5. Each app moves to the new tag, and its next deploy carries the change.
 
-How a token gets its CSS name: from the variable's **Web code syntax** in Figma (`var(--color-panel)`). Variables without one get a name from their path (`color/badge/client-bg` → `--color-badge-client-bg`). Shadows take theirs from a `code: --shadow-x` line in the style's description. Spacing follows Tailwind's 4px scale, so it isn't emitted.
+How a token gets its CSS name: from the variable's **Web code syntax** in Figma (`var(--color-panel)`). Variables without one get a name from their path (`color/badge/client-bg` → `--color-badge-client-bg`). Shadows take theirs from a `code: --shadow-x` line in the style's description. A code syntax that isn't a `var()` (spacing's `calc(var(--spacing) * 4)`, a radius of `2px`) means code writes that value directly, so nothing is emitted: spacing stays Tailwind's 4px scale.
 
 ## Per-app themes
 
@@ -55,4 +55,5 @@ Every app keeps the same components, spacing and type. Only the overridden token
 
 ## Versions
 
+- **v0.1.1**: tokens whose Figma code syntax is a plain value (radius `2px`, `40px`) are no longer emitted, so Tailwind's own `rounded-xs` is untouched.
 - **v0.1.0**: the tokens from Comedia Mail, matched one for one with Mail's previous `app/globals.css` theme. Mail is the first app on it.

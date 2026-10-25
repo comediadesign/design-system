@@ -75,7 +75,9 @@ function add(collection, prefix) {
   if (!c) return;
   const [base, ...rest] = c.modes;
   for (const v of c.variables) {
-    // Spacing is Tailwind's own 4px scale (code syntax calc(var(--spacing) * n)): nothing to emit.
+    // Code syntax that isn't var(--x) (Spacing's calc(var(--spacing) * n),
+    // a radius of "2px") means code uses that expression as is: nothing to emit.
+    if (v.web && !/^var\(--[a-z0-9-]+\)$/i.test(v.web.trim())) continue;
     const name = cssName(v, prefix);
     const val = cssValue(v, v.values[base]);
     const prev = theme.get(name);
@@ -90,6 +92,7 @@ function add(collection, prefix) {
   }
 }
 add('Color', 'color');
+add('Spacing', 'spacing');
 add('Radius', 'radius');
 add('Typography', 'font');
 

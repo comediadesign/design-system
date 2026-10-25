@@ -1,6 +1,6 @@
 {
   "name": "@comedia/design-system",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "The Comedia suite's design tokens (and later its shared UI), generated from the Comedia Suite Design System Figma library.",
   "type": "module",
