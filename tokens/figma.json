@@ -1,7 +1,7 @@
 {
   "source": {
     "fileKey": "5WsKy0WS3ipkyWLLTkfZRG",
-    "exportedAt": "2026-10-25T15:24:27.750Z"
+    "exportedAt": "2026-10-25T23:01:56.940Z"
   },
   "collections": [
     {
@@ -741,6 +741,81 @@
               "r": 0.9412,
               "g": 0.6588,
               "b": 0.1882,
+              "a": 1
+            }
+          }
+        },
+        {
+          "name": "neutral/870",
+          "type": "COLOR",
+          "web": null,
+          "description": null,
+          "scopes": [],
+          "values": {
+            "Value": {
+              "r": 0.1294,
+              "g": 0.1294,
+              "b": 0.1294,
+              "a": 1
+            }
+          }
+        },
+        {
+          "name": "neutral/880",
+          "type": "COLOR",
+          "web": null,
+          "description": null,
+          "scopes": [],
+          "values": {
+            "Value": {
+              "r": 0.1216,
+              "g": 0.1216,
+              "b": 0.1216,
+              "a": 1
+            }
+          }
+        },
+        {
+          "name": "neutral/825",
+          "type": "COLOR",
+          "web": null,
+          "description": null,
+          "scopes": [],
+          "values": {
+            "Value": {
+              "r": 0.1725,
+              "g": 0.1725,
+              "b": 0.1725,
+              "a": 1
+            }
+          }
+        },
+        {
+          "name": "brown/700",
+          "type": "COLOR",
+          "web": null,
+          "description": null,
+          "scopes": [],
+          "values": {
+            "Value": {
+              "r": 0.3569,
+              "g": 0.2902,
+              "b": 0.2275,
+              "a": 1
+            }
+          }
+        },
+        {
+          "name": "stone/100",
+          "type": "COLOR",
+          "web": null,
+          "description": null,
+          "scopes": [],
+          "values": {
+            "Value": {
+              "r": 0.8863,
+              "g": 0.8824,
+              "b": 0.8588,
               "a": 1
             }
           }
@@ -1760,6 +1835,82 @@
           "values": {
             "Default": {
               "alias": "violet-400/12"
+            }
+          }
+        },
+        {
+          "name": "color/bg/nav-pill",
+          "type": "COLOR",
+          "web": "var(--color-nav-pill)",
+          "description": "The suite nav pill on a desktop: Light Grey (#D9D9D9) at 5% over the panel, made solid so rows scrolling under it don't show through.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "values": {
+            "Default": {
+              "alias": "neutral/870"
+            }
+          }
+        },
+        {
+          "name": "color/bg/nav-pill-phone",
+          "type": "COLOR",
+          "web": "var(--color-nav-pill-phone)",
+          "description": "The nav pill on a phone, with a subtle hairline edge.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "values": {
+            "Default": {
+              "alias": "neutral/880"
+            }
+          }
+        },
+        {
+          "name": "color/bg/menu",
+          "type": "COLOR",
+          "web": "var(--color-menu)",
+          "description": "The app switcher's menu and the Comedia mark's disc.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "values": {
+            "Default": {
+              "alias": "neutral/825"
+            }
+          }
+        },
+        {
+          "name": "color/bg/account",
+          "type": "COLOR",
+          "web": "var(--color-account)",
+          "description": "The disc behind the signed-in account's initial (app switcher foot).",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "values": {
+            "Default": {
+              "alias": "brown/700"
+            }
+          }
+        },
+        {
+          "name": "color/text/warm",
+          "type": "COLOR",
+          "web": "var(--color-text-warm)",
+          "description": "Warm off-white: the Comedia mark, and email bodies in the thread view.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL"
+          ],
+          "values": {
+            "Default": {
+              "alias": "stone/100"
             }
           }
         }

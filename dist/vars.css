@@ -52,6 +52,11 @@
   --cds-palette-neutral-890: #181818;
   --cds-palette-sky-400: #6BB5D4;
   --cds-palette-amber-400: #F0A830;
+  --cds-palette-neutral-870: #212121;
+  --cds-palette-neutral-880: #1F1F1F;
+  --cds-palette-neutral-825: #2C2C2C;
+  --cds-palette-brown-700: #5B4A3A;
+  --cds-palette-stone-100: #E2E1DB;
   --cds-color-shell: var(--cds-palette-neutral-950);
   --cds-color-panel: var(--cds-palette-neutral-900);
   --cds-color-surface: var(--cds-palette-neutral-925);
@@ -111,6 +116,11 @@
   --cds-color-warmth-warm: var(--cds-palette-amber-400);
   --cds-color-warmth-hot: var(--cds-palette-teal-400);
   --cds-color-reminder-tint: var(--cds-palette-violet-400-12);
+  --cds-color-nav-pill: var(--cds-palette-neutral-870);
+  --cds-color-nav-pill-phone: var(--cds-palette-neutral-880);
+  --cds-color-menu: var(--cds-palette-neutral-825);
+  --cds-color-account: var(--cds-palette-brown-700);
+  --cds-color-text-warm: var(--cds-palette-stone-100);
   --cds-radius-sm: 4px;
   --cds-radius-md: 8px;
   --cds-radius-lg: 12px;

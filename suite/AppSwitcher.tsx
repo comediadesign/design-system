@@ -16,12 +16,12 @@ import { comediaIcon, gridIcon } from './icons';
 // that puts the switcher in its header instead (Mail, Figma 2583:152: top
 // right, beside search). `align="right"` opens the menu from the right edge.
 //
-// Self-contained on purpose — inline styles and literal colours rather than
-// this app's tokens — so the same file drops into every app in the suite.
+// Inline styles, with the design system's tokens and their values as fallbacks,
+// so it looks the same in an app that only imports the namespaced vars.css.
 
 const C = {
-  disc:     '#2C2C2C',
-  menu:     '#2C2C2C',
+  disc:     'var(--color-menu, #2C2C2C)',
+  menu:     'var(--color-menu, #2C2C2C)',
   ring:     'rgba(255,255,255,0.14)',
   ringOpen: 'rgba(255,255,255,0.25)',
   rule:     'rgba(255,255,255,0.08)',
@@ -149,7 +149,7 @@ export function AppSwitcher({
             transition: 'border-color 120ms',
           }}
         >
-          <span aria-hidden style={mask(comediaIcon, 15, '#E2E1DB')} />
+          <span aria-hidden style={mask(comediaIcon, 15, 'var(--color-text-warm, #E2E1DB)')} />
         </span>
         {label && (
           <>
@@ -261,7 +261,7 @@ export function AppSwitcher({
                   width: 24,
                   height: 24,
                   borderRadius: '50%',
-                  background: '#5B4A3A',
+                  background: 'var(--color-account, #5B4A3A)',
                   color: C.hi,
                   display: 'flex',
                   alignItems: 'center',

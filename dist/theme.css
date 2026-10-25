@@ -53,6 +53,11 @@
   --palette-neutral-890: #181818;
   --palette-sky-400: #6BB5D4;
   --palette-amber-400: #F0A830;
+  --palette-neutral-870: #212121;
+  --palette-neutral-880: #1F1F1F;
+  --palette-neutral-825: #2C2C2C;
+  --palette-brown-700: #5B4A3A;
+  --palette-stone-100: #E2E1DB;
 }
 
 /* Tokens. static: utilities read var(--color-*), so a [data-app] theme reaches them. */
@@ -116,6 +121,11 @@
   --color-warmth-warm: var(--palette-amber-400);
   --color-warmth-hot: var(--palette-teal-400);
   --color-reminder-tint: var(--palette-violet-400-12);
+  --color-nav-pill: var(--palette-neutral-870);
+  --color-nav-pill-phone: var(--palette-neutral-880);
+  --color-menu: var(--palette-neutral-825);
+  --color-account: var(--palette-brown-700);
+  --color-text-warm: var(--palette-stone-100);
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
