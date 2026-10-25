@@ -48,7 +48,8 @@ Apps use the **tokens** (`--color-*`, `--radius-*`, `--shadow-*`, `--text-*`, `-
 | --- | --- | --- |
 | Mail (and Outreach) | chrisbcn/comedia-email | `theme.css` + `ui.css` in `app/globals.css`; shared components imported directly; `components/suite/AppSwitcher.tsx` wraps the shared switcher |
 | Slides | comediadesign/comedia-deck-system | `theme.css` + `ui.css` in `src/app/globals.css`, before Slides' own `@theme` (its deck palette wins on shared names); components and switcher as in Mail |
-| Patterns, Builder | comediadesign/concept-prototypes (`suite/shared-ui`, `suite/demo-data`) | `vars.css` + `ui.css` in `packages/suite-ui/src/tokens.css`, mapped onto the suite chrome's names; `suite-ui/src/ui/*` re-export the shared components; its `AppSwitcher` wraps the shared one |
+| Patterns | comediadesign/patterns | `vars.css` imported in `apps/web/app/layout.tsx`, mapped onto the app's own names in `globals.css`; the shared app switcher in its top bar. Workflow updates `apps/web` on `main` |
+| Samsung gallery, Builder | comediadesign/concept-prototypes (`suite/shared-ui`, `suite/demo-data`) | `vars.css` + `ui.css` in `packages/suite-ui/src/tokens.css`, mapped onto the suite chrome's names; `suite-ui/src/ui/*` re-export the shared components; its `AppSwitcher` wraps the shared one |
 
 ## Shared components
 

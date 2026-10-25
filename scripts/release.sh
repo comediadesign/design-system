@@ -21,6 +21,7 @@ APPS=(
   "chrisbcn/comedia-email"
   "comediadesign/comedia-deck-system"
   "comediadesign/concept-prototypes"
+  "comediadesign/patterns"
 )
 for r in "${APPS[@]}"; do
   if gh workflow run design-system-update.yml -R "$r" >/dev/null 2>&1; then echo "Updating $r"; else echo "Couldn't start the update in $r (it will run within the hour)"; fi
