@@ -1,0 +1,85 @@
+# Keeps this app on the newest @comedia/design-system release.
+#
+# Hourly (and on demand) it reads the newest v* tag of the public
+# comediadesign/design-system repo. If this app is behind, it moves the
+# package.json + lockfile to that release and pushes to BRANCH; the host
+# (Vercel) deploys from there. If the new tokens break the build, Vercel keeps
+# the last good deployment live.
+#
+# Copied from comediadesign/design-system templates/design-system-update.yml.
+# Per app, set only the env block.
+name: Design system update
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: design-system-update
+  cancel-in-progress: false
+
+env:
+  BRANCH: main          # the branch that carries the dependency
+  PKG_DIR: .            # where the package.json with @comedia/design-system lives
+  PM: npm               # npm | pnpm
+  FOLLOW: ""            # branches (space-separated) that merge BRANCH after an update
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - if: env.PM == 'pnpm'
+        run: corepack enable
+
+      - id: check
+        name: Newest release vs this app's
+        run: |
+          latest=$(git ls-remote --tags --refs https://github.com/comediadesign/design-system.git 'v*' | sed 's#.*refs/tags/##' | sort -V | tail -1)
+          current=$(node -p "(require('./$PKG_DIR/package.json').dependencies['@comedia/design-system'] || '').split('/').pop()")
+          echo "Newest release: $latest. This app: $current."
+          echo "latest=$latest" >> "$GITHUB_OUTPUT"
+          if [ -n "$latest" ] && [ "$latest" != "$current" ]; then echo "update=true" >> "$GITHUB_OUTPUT"; fi
+
+      - if: steps.check.outputs.update == 'true'
+        name: Move to the newest release
+        env:
+          LATEST: ${{ steps.check.outputs.latest }}
+        run: |
+          url="https://codeload.github.com/comediadesign/design-system/tar.gz/refs/tags/$LATEST"
+          if [ "$PM" = "npm" ]; then
+            (cd "$PKG_DIR" && npm install --package-lock-only --ignore-scripts --no-audit --no-fund "@comedia/design-system@$url")
+          else
+            node -e "const f='$PKG_DIR/package.json',fs=require('fs'),j=JSON.parse(fs.readFileSync(f));j.dependencies['@comedia/design-system']='$url';fs.writeFileSync(f,JSON.stringify(j,null,2)+'\n')"
+            pnpm install --lockfile-only --no-frozen-lockfile
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Design system $LATEST" -m "Automatic update from comediadesign/design-system ($url)."
+          git push origin "HEAD:$BRANCH"
+
+      - if: steps.check.outputs.update == 'true' && env.FOLLOW != ''
+        name: Carry the update into the following branches
+        env:
+          LATEST: ${{ steps.check.outputs.latest }}
+        run: |
+          bump=$(git rev-parse HEAD)
+          for b in $FOLLOW; do
+            git fetch origin "$b"
+            git checkout -B "$b" "origin/$b"
+            git merge --no-edit -m "Merge design system $LATEST into $b" "$bump" || { echo "Merging into $b conflicted; update it by hand."; exit 1; }
+            git push origin "$b"
+          done

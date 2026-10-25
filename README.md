@@ -55,8 +55,22 @@ Apps use the **tokens** (`--color-*`, `--radius-*`, `--shadow-*`, `--text-*`, `-
 1. Change the variables or styles in the Figma library, and publish the library so the design files get the change too.
 2. Export: run `scripts/figma-export.js` against the library. Claude can do this through its Figma connection ("export the design system tokens"), or you can paste the script into a Figma plugin console. Save the result as `tokens/figma.json`.
 3. Build: `npm run build`. CI fails a push whose `dist/` doesn't match the export.
-4. Commit, tag a new version (`v0.2.0`), push.
-5. Each app moves to the new tag, and its next deploy carries the change.
+4. Release: `scripts/release.sh 0.3.0`. It checks `dist/`, sets the version, commits, tags `v0.3.0`, pushes, and starts every app's update.
+5. Each app updates itself (below) and deploys.
+
+## How apps stay current
+
+Each app repo has `.github/workflows/design-system-update.yml` (copied from `templates/`). Every hour, and whenever `release.sh` starts it, it reads the newest `v*` tag here. If the app is behind, the workflow moves its `package.json` and lockfile to that release and pushes, and Vercel deploys. This repo is public, so the workflow needs no tokens; it pushes with the app repo's own built-in permission.
+
+If a release breaks an app's build, Vercel keeps that app's last good deployment live, and the failed build shows in Vercel. Fix forward with a new release.
+
+| App | Workflow updates | Notes |
+| --- | --- | --- |
+| Mail | `main` | |
+| Slides | `main` | |
+| Patterns, Builder | `suite/shared-ui`, then merges into `suite/demo-data` | The workflow file lives on `main` (GitHub runs scheduled workflows from the default branch); `main` itself has no suite chrome yet. |
+
+To add an app: install the package, copy the template into its `.github/workflows/`, set the four `env` lines, and add the repo to `APPS` in `scripts/release.sh`.
 
 How a token gets its CSS name: from the variable's **Web code syntax** in Figma (`var(--color-panel)`). Variables without one get a name from their path (`color/badge/client-bg` → `--color-badge-client-bg`). Shadows take theirs from a `code: --shadow-x` line in the style's description. A code syntax that isn't a `var()` (spacing's `calc(var(--spacing) * 4)`, a radius of `2px`) means code writes that value directly, so nothing is emitted: spacing stays Tailwind's 4px scale.
 
