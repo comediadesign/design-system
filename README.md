@@ -20,8 +20,10 @@ One design system for the Comedia suite: Mail (with Outreach), Slides, Patterns 
 ## Using it in an app
 
 ```bash
-npm install github:comediadesign/design-system#v0.1.0
+npm install "@comedia/design-system@https://codeload.github.com/comediadesign/design-system/tar.gz/refs/tags/v0.1.1"
 ```
+
+Use the release download (https), not `github:…`: npm records that as a git+ssh address, which Vercel's build can't fetch.
 
 ```css
 /* app/globals.css: after Tailwind, before the app's own CSS */
