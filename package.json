@@ -1,0 +1,19 @@
+{
+  "name": "@comedia/design-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The Comedia suite's design tokens (and later its shared UI), generated from the Comedia Suite Design System Figma library.",
+  "type": "module",
+  "exports": {
+    "./theme.css": { "style": "./dist/theme.css", "default": "./dist/theme.css" },
+    "./tokens": { "types": "./dist/tokens.d.ts", "default": "./dist/tokens.js" },
+    "./tokens.json": "./dist/tokens.json",
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "tokens", "scripts", "README.md"],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check"
+  },
+  "engines": { "node": ">=20" }
+}
