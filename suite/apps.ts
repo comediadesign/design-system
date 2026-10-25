@@ -29,7 +29,7 @@ export interface SuiteUrls {
 export const PRODUCTION_URLS: SuiteUrls = {
   mail: 'https://comedia-email.vercel.app',
   slides: 'https://comedia-deck-system.vercel.app',
-  patterns: 'https://concept-prototypes.vercel.app/?gallery',
+  patterns: 'https://comedia-patterns.vercel.app',
   builder: null,
 };
 
@@ -37,7 +37,7 @@ export const PRODUCTION_URLS: SuiteUrls = {
 export const LOCAL_URLS: SuiteUrls = {
   mail: 'http://localhost:3101',
   slides: 'http://localhost:3102',
-  patterns: 'http://localhost:8543/?gallery',
+  patterns: 'http://localhost:3200',
   builder: 'http://localhost:8545',
 };
 
@@ -47,7 +47,7 @@ export function suiteApps(urls: SuiteUrls): SuiteApp[] {
     { id: 'mail', name: 'Mail', desc: 'Inbox, tasks and contacts', url: urls.mail, icon: mailIcon },
     { id: 'outreach', name: 'Outreach', desc: 'Love letters, follow-ups and prospects', url: `${urls.mail}/outreach`, icon: outreachIcon },
     { id: 'slides', name: 'Slides', desc: 'Decks, templates and guidelines', url: urls.slides, icon: slidesIcon },
-    { id: 'patterns', name: 'Patterns', desc: 'Component library and concept prototypes', url: urls.patterns, icon: patternsIcon },
+    { id: 'patterns', name: 'Patterns', desc: 'Client pattern libraries, built with Claude', url: urls.patterns, icon: patternsIcon },
     { id: 'builder', name: 'Builder', desc: 'Generate screens and flows from a brief', url: urls.builder, icon: builderIcon },
   ];
 }

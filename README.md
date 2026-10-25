@@ -106,6 +106,7 @@ Every app keeps the same components, spacing and type. Only the overridden token
 
 ## Versions
 
+- **v0.3.1**: "Patterns" in the app switcher is the Patterns product (comediadesign/patterns: comedia-patterns.vercel.app, localhost:3200), not the Samsung concept-prototypes gallery, which is a client project.
 - **v0.3.0**: shared components: the 20 shadcn components (`ui/*`), `cn()`, the mobile hook, and the suite's app switcher with its app list and icons (`suite`). `ui.css` for Tailwind.
 - **v0.2.1**: release dry run, no changes.
 - **v0.2.0**: `vars.css`, the tokens as namespaced `--cds-*` variables for apps with their own theme. `theme.css` is unchanged.
