@@ -42,6 +42,14 @@ That gives every token as a CSS variable and a Tailwind utility: `bg-panel`, `te
 
 Apps use the **tokens** (`--color-*`, `--radius-*`, `--shadow-*`, `--text-*`, `--font-*`), never the `--palette-*` colours underneath. That's what lets a theme swap the palette without touching components.
 
+## Apps on it
+
+| App | Repo | How |
+| --- | --- | --- |
+| Mail (and Outreach) | chrisbcn/comedia-email | `theme.css` in `app/globals.css` |
+| Slides | comediadesign/comedia-deck-system | `theme.css` in `src/app/globals.css`, before Slides' own `@theme` (its deck palette wins on shared names) |
+| Patterns, Builder | comediadesign/concept-prototypes (`suite/shared-ui`, `suite/demo-data`) | `vars.css` in `packages/suite-ui/src/tokens.css`, mapped onto the suite chrome's names |
+
 ## Changing the design system
 
 1. Change the variables or styles in the Figma library, and publish the library so the design files get the change too.
