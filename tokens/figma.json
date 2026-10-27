@@ -1,7 +1,7 @@
 {
   "source": {
     "fileKey": "5WsKy0WS3ipkyWLLTkfZRG",
-    "exportedAt": "2026-10-25T23:01:56.940Z"
+    "exportedAt": "2026-10-27T04:18:17.271Z"
   },
   "collections": [
     {
@@ -116,36 +116,6 @@
           }
         },
         {
-          "name": "neutral/850",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.1176,
-              "g": 0.1176,
-              "b": 0.1176,
-              "a": 1
-            }
-          }
-        },
-        {
-          "name": "neutral/875",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.1255,
-              "g": 0.1255,
-              "b": 0.1255,
-              "a": 1
-            }
-          }
-        },
-        {
           "name": "neutral/900",
           "type": "COLOR",
           "web": null,
@@ -156,21 +126,6 @@
               "r": 0.0902,
               "g": 0.0902,
               "b": 0.0902,
-              "a": 1
-            }
-          }
-        },
-        {
-          "name": "neutral/925",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.0706,
-              "g": 0.0706,
-              "b": 0.0706,
               "a": 1
             }
           }
@@ -221,51 +176,6 @@
           }
         },
         {
-          "name": "sky/100",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.7255,
-              "g": 0.8392,
-              "b": 0.8745,
-              "a": 1
-            }
-          }
-        },
-        {
-          "name": "sky/500",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.2392,
-              "g": 0.6,
-              "b": 0.9608,
-              "a": 1
-            }
-          }
-        },
-        {
-          "name": "navy/900",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0,
-              "g": 0.0941,
-              "b": 0.5098,
-              "a": 1
-            }
-          }
-        },
-        {
           "name": "pink/500",
           "type": "COLOR",
           "web": null,
@@ -276,21 +186,6 @@
               "r": 0.8588,
               "g": 0.0275,
               "b": 0.4,
-              "a": 1
-            }
-          }
-        },
-        {
-          "name": "rose/200",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 1,
-              "g": 0.6314,
-              "b": 0.6627,
               "a": 1
             }
           }
@@ -326,81 +221,6 @@
           }
         },
         {
-          "name": "orange/400",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 1,
-              "g": 0.7765,
-              "b": 0.1647,
-              "a": 1
-            }
-          }
-        },
-        {
-          "name": "orange/500",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.9765,
-              "g": 0.6431,
-              "b": 0.1412,
-              "a": 1
-            }
-          }
-        },
-        {
-          "name": "olive/900",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.2824,
-              "g": 0.2627,
-              "b": 0,
-              "a": 1
-            }
-          }
-        },
-        {
-          "name": "green/50",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.9255,
-              "g": 0.9333,
-              "b": 0.9059,
-              "a": 1
-            }
-          }
-        },
-        {
-          "name": "green/900",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.0118,
-              "g": 0.3333,
-              "b": 0.1451,
-              "a": 1
-            }
-          }
-        },
-        {
           "name": "teal/400",
           "type": "COLOR",
           "web": null,
@@ -411,21 +231,6 @@
               "r": 0.1765,
               "g": 0.7961,
               "b": 0.5608,
-              "a": 1
-            }
-          }
-        },
-        {
-          "name": "violet/400",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.6078,
-              "g": 0.4549,
-              "b": 0.9529,
               "a": 1
             }
           }
@@ -566,51 +371,6 @@
           }
         },
         {
-          "name": "white/2",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 1,
-              "g": 1,
-              "b": 1,
-              "a": 0.02
-            }
-          }
-        },
-        {
-          "name": "white/30",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 1,
-              "g": 1,
-              "b": 1,
-              "a": 0.3
-            }
-          }
-        },
-        {
-          "name": "blue-500/22",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.1647,
-              "g": 0.4157,
-              "b": 1,
-              "a": 0.22
-            }
-          }
-        },
-        {
           "name": "blue-500/25",
           "type": "COLOR",
           "web": null,
@@ -626,22 +386,7 @@
           }
         },
         {
-          "name": "sky-500/10",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.2392,
-              "g": 0.6,
-              "b": 0.9608,
-              "a": 0.1
-            }
-          }
-        },
-        {
-          "name": "gold-400/10",
+          "name": "gold-400/15",
           "type": "COLOR",
           "web": null,
           "description": null,
@@ -651,12 +396,12 @@
               "r": 0.9882,
               "g": 0.8157,
               "b": 0.2824,
-              "a": 0.1
+              "a": 0.15
             }
           }
         },
         {
-          "name": "pink-500/10",
+          "name": "pink-500/15",
           "type": "COLOR",
           "web": null,
           "description": null,
@@ -666,102 +411,12 @@
               "r": 0.8588,
               "g": 0.0275,
               "b": 0.4,
-              "a": 0.1
+              "a": 0.15
             }
           }
         },
         {
-          "name": "violet-400/12",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.6078,
-              "g": 0.4549,
-              "b": 0.9529,
-              "a": 0.12
-            }
-          }
-        },
-        {
-          "name": "cyan-400/7",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.3569,
-              "g": 0.7843,
-              "b": 0.9608,
-              "a": 0.07
-            }
-          }
-        },
-        {
-          "name": "neutral/890",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.0941,
-              "g": 0.0941,
-              "b": 0.0941,
-              "a": 1
-            }
-          }
-        },
-        {
-          "name": "sky/400",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.4196,
-              "g": 0.7098,
-              "b": 0.8314,
-              "a": 1
-            }
-          }
-        },
-        {
-          "name": "amber/400",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.9412,
-              "g": 0.6588,
-              "b": 0.1882,
-              "a": 1
-            }
-          }
-        },
-        {
-          "name": "neutral/870",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.1294,
-              "g": 0.1294,
-              "b": 0.1294,
-              "a": 1
-            }
-          }
-        },
-        {
-          "name": "neutral/880",
+          "name": "neutral/850",
           "type": "COLOR",
           "web": null,
           "description": null,
@@ -771,36 +426,6 @@
               "r": 0.1216,
               "g": 0.1216,
               "b": 0.1216,
-              "a": 1
-            }
-          }
-        },
-        {
-          "name": "neutral/825",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.1725,
-              "g": 0.1725,
-              "b": 0.1725,
-              "a": 1
-            }
-          }
-        },
-        {
-          "name": "brown/700",
-          "type": "COLOR",
-          "web": null,
-          "description": null,
-          "scopes": [],
-          "values": {
-            "Value": {
-              "r": 0.3569,
-              "g": 0.2902,
-              "b": 0.2275,
               "a": 1
             }
           }
@@ -817,6 +442,36 @@
               "g": 0.8824,
               "b": 0.8588,
               "a": 1
+            }
+          }
+        },
+        {
+          "name": "pink/300",
+          "type": "COLOR",
+          "web": null,
+          "description": "Pink as text on its own 15% tint (the reminder badge). #DB0766 is too dark there.",
+          "scopes": [],
+          "values": {
+            "Value": {
+              "r": 1,
+              "g": 0.4196,
+              "b": 0.651,
+              "a": 1
+            }
+          }
+        },
+        {
+          "name": "teal-400/15",
+          "type": "COLOR",
+          "web": null,
+          "description": null,
+          "scopes": [],
+          "values": {
+            "Value": {
+              "r": 0.1765,
+              "g": 0.7961,
+              "b": 0.5608,
+              "a": 0.15
             }
           }
         }
@@ -869,7 +524,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "neutral/925"
+              "alias": "neutral/950"
             }
           }
         },
@@ -929,7 +584,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "neutral/875"
+              "alias": "neutral/850"
             }
           }
         },
@@ -951,7 +606,7 @@
         {
           "name": "color/bg/row-hover",
           "type": "COLOR",
-          "web": "var(--color-row-a)",
+          "web": "var(--color-row-hover)",
           "description": null,
           "scopes": [
             "FRAME_FILL",
@@ -1101,7 +756,7 @@
         {
           "name": "color/text/on-yellow",
           "type": "COLOR",
-          "web": "var(--color-bg)",
+          "web": "var(--color-text-on-yellow)",
           "description": null,
           "scopes": [
             "SHAPE_FILL",
@@ -1124,7 +779,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "sky/100"
+              "alias": "blue/300"
             }
           }
         },
@@ -1219,7 +874,7 @@
         {
           "name": "color/accent/send",
           "type": "COLOR",
-          "web": "var(--color-orange-00)",
+          "web": "var(--color-accent-send)",
           "description": null,
           "scopes": [
             "FRAME_FILL",
@@ -1229,14 +884,14 @@
           ],
           "values": {
             "Default": {
-              "alias": "orange/400"
+              "alias": "gold/400"
             }
           }
         },
         {
           "name": "color/accent/active",
           "type": "COLOR",
-          "web": "var(--color-nav-active-fg)",
+          "web": "var(--color-accent-active)",
           "description": null,
           "scopes": [
             "FRAME_FILL",
@@ -1253,7 +908,7 @@
         {
           "name": "color/accent/unread",
           "type": "COLOR",
-          "web": "var(--color-blue)",
+          "web": "var(--color-accent-unread)",
           "description": null,
           "scopes": [
             "FRAME_FILL",
@@ -1263,14 +918,14 @@
           ],
           "values": {
             "Default": {
-              "alias": "sky/500"
+              "alias": "blue/500"
             }
           }
         },
         {
           "name": "color/accent/star",
           "type": "COLOR",
-          "web": "var(--color-yellow)",
+          "web": "var(--color-accent-star)",
           "description": null,
           "scopes": [
             "FRAME_FILL",
@@ -1304,7 +959,7 @@
         {
           "name": "color/status/danger",
           "type": "COLOR",
-          "web": "var(--color-red)",
+          "web": "var(--color-danger)",
           "description": null,
           "scopes": [
             "FRAME_FILL",
@@ -1348,14 +1003,14 @@
           ],
           "values": {
             "Default": {
-              "alias": "violet/400"
+              "alias": "pink/500"
             }
           }
         },
         {
           "name": "color/badge/ai-bg",
           "type": "COLOR",
-          "web": "var(--color-yellow-00)",
+          "web": "var(--color-badge-ai-bg)",
           "description": null,
           "scopes": [
             "FRAME_FILL",
@@ -1370,7 +1025,7 @@
         {
           "name": "color/badge/ai-fg",
           "type": "COLOR",
-          "web": "var(--color-bg)",
+          "web": "var(--color-badge-ai-fg)",
           "description": null,
           "scopes": [
             "SHAPE_FILL",
@@ -1385,7 +1040,7 @@
         {
           "name": "color/badge/draft-bg",
           "type": "COLOR",
-          "web": "var(--color-blue-light)",
+          "web": "var(--color-badge-draft-bg)",
           "description": null,
           "scopes": [
             "FRAME_FILL",
@@ -1393,14 +1048,14 @@
           ],
           "values": {
             "Default": {
-              "alias": "sky/100"
+              "alias": "neutral/700"
             }
           }
         },
         {
           "name": "color/badge/draft-fg",
           "type": "COLOR",
-          "web": "var(--color-navy)",
+          "web": "var(--color-badge-draft-fg)",
           "description": null,
           "scopes": [
             "SHAPE_FILL",
@@ -1408,14 +1063,14 @@
           ],
           "values": {
             "Default": {
-              "alias": "navy/900"
+              "alias": "neutral/400"
             }
           }
         },
         {
           "name": "color/badge/reply-bg",
           "type": "COLOR",
-          "web": "var(--color-navy)",
+          "web": "var(--color-badge-reply-bg)",
           "description": null,
           "scopes": [
             "FRAME_FILL",
@@ -1423,14 +1078,14 @@
           ],
           "values": {
             "Default": {
-              "alias": "navy/900"
+              "alias": "blue-500/12"
             }
           }
         },
         {
           "name": "color/badge/reply-fg",
           "type": "COLOR",
-          "web": "var(--color-rose)",
+          "web": "var(--color-badge-reply-fg)",
           "description": null,
           "scopes": [
             "SHAPE_FILL",
@@ -1438,14 +1093,14 @@
           ],
           "values": {
             "Default": {
-              "alias": "rose/200"
+              "alias": "blue/300"
             }
           }
         },
         {
           "name": "color/badge/reminder-bg",
           "type": "COLOR",
-          "web": "var(--color-rose)",
+          "web": "var(--color-badge-reminder-bg)",
           "description": null,
           "scopes": [
             "FRAME_FILL",
@@ -1453,14 +1108,14 @@
           ],
           "values": {
             "Default": {
-              "alias": "rose/200"
+              "alias": "pink-500/15"
             }
           }
         },
         {
           "name": "color/badge/reminder-fg",
           "type": "COLOR",
-          "web": "var(--color-pink)",
+          "web": "var(--color-badge-reminder-fg)",
           "description": null,
           "scopes": [
             "SHAPE_FILL",
@@ -1468,7 +1123,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "pink/500"
+              "alias": "pink/300"
             }
           }
         },
@@ -1483,7 +1138,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "green/900"
+              "alias": "gold-400/15"
             }
           }
         },
@@ -1498,14 +1153,14 @@
           ],
           "values": {
             "Default": {
-              "alias": "green/50"
+              "alias": "gold/400"
             }
           }
         },
         {
           "name": "color/badge/quiet-bg",
           "type": "COLOR",
-          "web": "var(--color-chip)",
+          "web": "var(--color-badge-quiet-bg)",
           "description": null,
           "scopes": [
             "FRAME_FILL",
@@ -1520,7 +1175,7 @@
         {
           "name": "color/badge/quiet-fg",
           "type": "COLOR",
-          "web": "var(--color-text-mid)",
+          "web": "var(--color-badge-quiet-fg)",
           "description": null,
           "scopes": [
             "SHAPE_FILL",
@@ -1543,7 +1198,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "orange/500"
+              "alias": "teal-400/15"
             }
           }
         },
@@ -1558,14 +1213,14 @@
           ],
           "values": {
             "Default": {
-              "alias": "olive/900"
+              "alias": "teal/400"
             }
           }
         },
         {
           "name": "color/badge/prospect-bg",
           "type": "COLOR",
-          "web": "var(--color-pink)",
+          "web": "var(--color-badge-prospect-bg)",
           "description": null,
           "scopes": [
             "FRAME_FILL",
@@ -1573,14 +1228,14 @@
           ],
           "values": {
             "Default": {
-              "alias": "pink/500"
+              "alias": "blue-500/12"
             }
           }
         },
         {
           "name": "color/badge/prospect-fg",
           "type": "COLOR",
-          "web": "var(--color-yellow-00)",
+          "web": "var(--color-badge-prospect-fg)",
           "description": null,
           "scopes": [
             "SHAPE_FILL",
@@ -1588,7 +1243,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "yellow/400"
+              "alias": "blue/300"
             }
           }
         },
@@ -1608,23 +1263,6 @@
           }
         },
         {
-          "name": "color/accent/gold",
-          "type": "COLOR",
-          "web": "var(--color-gold)",
-          "description": "Highlights.",
-          "scopes": [
-            "FRAME_FILL",
-            "SHAPE_FILL",
-            "TEXT_FILL",
-            "STROKE_COLOR"
-          ],
-          "values": {
-            "Default": {
-              "alias": "gold/400"
-            }
-          }
-        },
-        {
           "name": "color/bg/accent-tint-strong",
           "type": "COLOR",
           "web": "var(--color-accent-tint2)",
@@ -1635,7 +1273,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "blue-500/22"
+              "alias": "blue-500/25"
             }
           }
         },
@@ -1650,7 +1288,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "sky-500/10"
+              "alias": "blue-500/12"
             }
           }
         },
@@ -1665,7 +1303,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "gold-400/10"
+              "alias": "gold-400/15"
             }
           }
         },
@@ -1680,7 +1318,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "pink-500/10"
+              "alias": "pink-500/15"
             }
           }
         },
@@ -1709,7 +1347,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "white/30"
+              "alias": "white/25"
             }
           }
         },
@@ -1717,21 +1355,21 @@
           "name": "color/bg/row-selected",
           "type": "COLOR",
           "web": "var(--color-bg-selected)",
-          "description": "The open thread's row.",
+          "description": "The open thread&#39;s row.",
           "scopes": [
             "FRAME_FILL",
             "SHAPE_FILL"
           ],
           "values": {
             "Default": {
-              "alias": "cyan-400/7"
+              "alias": "blue-500/12"
             }
           }
         },
         {
           "name": "color/bg/row-band",
           "type": "COLOR",
-          "web": "var(--color-row-b)",
+          "web": "var(--color-row-band)",
           "description": "Second row band.",
           "scopes": [
             "FRAME_FILL",
@@ -1739,7 +1377,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "white/2"
+              "alias": "white/3"
             }
           }
         },
@@ -1754,7 +1392,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "neutral/890"
+              "alias": "neutral/900"
             }
           }
         },
@@ -1785,7 +1423,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "sky/400"
+              "alias": "blue/500"
             }
           }
         },
@@ -1802,7 +1440,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "amber/400"
+              "alias": "gold/400"
             }
           }
         },
@@ -1834,7 +1472,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "violet-400/12"
+              "alias": "pink-500/15"
             }
           }
         },
@@ -1842,14 +1480,14 @@
           "name": "color/bg/nav-pill",
           "type": "COLOR",
           "web": "var(--color-nav-pill)",
-          "description": "The suite nav pill on a desktop: Light Grey (#D9D9D9) at 5% over the panel, made solid so rows scrolling under it don't show through.",
+          "description": "The suite nav pill on a desktop: Light Grey (#D9D9D9) at 5% over the panel, made solid so rows scrolling under it don&#39;t show through.",
           "scopes": [
             "FRAME_FILL",
             "SHAPE_FILL"
           ],
           "values": {
             "Default": {
-              "alias": "neutral/870"
+              "alias": "neutral/850"
             }
           }
         },
@@ -1864,7 +1502,7 @@
           ],
           "values": {
             "Default": {
-              "alias": "neutral/880"
+              "alias": "neutral/850"
             }
           }
         },
@@ -1872,14 +1510,14 @@
           "name": "color/bg/menu",
           "type": "COLOR",
           "web": "var(--color-menu)",
-          "description": "The app switcher's menu and the Comedia mark's disc.",
+          "description": "The app switcher&#39;s menu and the Comedia mark&#39;s disc.",
           "scopes": [
             "FRAME_FILL",
             "SHAPE_FILL"
           ],
           "values": {
             "Default": {
-              "alias": "neutral/825"
+              "alias": "neutral/800"
             }
           }
         },
@@ -1887,14 +1525,14 @@
           "name": "color/bg/account",
           "type": "COLOR",
           "web": "var(--color-account)",
-          "description": "The disc behind the signed-in account's initial (app switcher foot).",
+          "description": "The disc behind the signed-in account&#39;s initial (app switcher foot).",
           "scopes": [
             "FRAME_FILL",
             "SHAPE_FILL"
           ],
           "values": {
             "Default": {
-              "alias": "brown/700"
+              "alias": "neutral/700"
             }
           }
         },

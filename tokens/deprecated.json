@@ -1,0 +1,20 @@
+{
+  "note": "Old CSS names kept for one release (v0.6.x) so apps keep working while they move to the new names. Remove in v0.7. A var() points at the token that replaced it; a hex is a colour the library no longer has, frozen at its old value until the app stops using it.",
+  "release": "0.6",
+  "aliases": {
+    "--color-yellow": "var(--color-accent-star)",
+    "--color-gold": "var(--color-accent-star)",
+    "--color-yellow-00": "var(--color-accent-active)",
+    "--color-nav-active-fg": "var(--color-accent-active)",
+    "--color-red": "var(--color-danger)",
+    "--color-pink": "var(--color-danger)",
+    "--color-blue": "var(--color-accent-unread)",
+    "--color-orange-00": "var(--color-accent-send)",
+    "--color-row-a": "var(--color-row-hover)",
+    "--color-row-b": "var(--color-row-band)",
+    "--color-bg": "var(--color-text-on-yellow)",
+    "--color-navy": "#001882",
+    "--color-rose": "#FFA1A9",
+    "--color-blue-light": "#B9D6DF"
+  }
+}
