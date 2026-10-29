@@ -114,11 +114,20 @@ export interface PandaPullProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export function PandaPull({ progress, refreshing = false, size = 56, className, style, ...props }: PandaPullProps) {
+  // Reduced motion: the scrub still tracks the pull — it is 1:1 with the
+  // user's own finger, like a scrollbar, not autonomous motion. Only the
+  // self-playing refresh loop is calmed: a gentle opacity pulse on a static
+  // frame instead of the karate playback.
   const reduced = usePrefersReducedMotion();
   const [playFrame, setPlayFrame] = React.useState(0);
+  const [dimmed, setDimmed] = React.useState(false);
 
   React.useEffect(() => {
-    if (!refreshing || reduced) return;
+    if (!refreshing) return;
+    if (reduced) {
+      const t = setInterval(() => setDimmed((d) => !d), 900);
+      return () => { clearInterval(t); setDimmed(false); };
+    }
     const t = setInterval(
       () => setPlayFrame((f) => (f + 1) % STRIP_FRAMES),
       1000 / LOOP_FPS,
@@ -127,7 +136,7 @@ export function PandaPull({ progress, refreshing = false, size = 56, className, 
   }, [refreshing, reduced]);
 
   const frame = refreshing
-    ? playFrame
+    ? (reduced ? 0 : playFrame)
     : Math.min(STRIP_FRAMES - 1, Math.max(0, Math.round(progress * (STRIP_FRAMES - 1))));
   const h = size;
   const w = (size * STRIP_FRAME_W) / STRIP_FRAME_H;
@@ -141,8 +150,10 @@ export function PandaPull({ progress, refreshing = false, size = 56, className, 
         height: h,
         backgroundImage: `url(${assetSrc(strip120)})`,
         backgroundSize: `${w * STRIP_FRAMES}px ${h}px`,
-        backgroundPositionX: `-${frame * w}px`,
+        backgroundPosition: `${-frame * w}px 0`,
         backgroundRepeat: 'no-repeat',
+        opacity: dimmed ? 0.45 : 1,
+        transition: 'opacity 0.8s ease-in-out',
         ...style,
       }}
       {...props}
