@@ -71,6 +71,17 @@ its plain-text markup. Unlike the shadcn set it is self-contained — inline
 styles over the tokens with resolved fallbacks — so it needs no `ui.css`
 entry and works before an app adopts `theme.css`.
 
+**The suite loader** (`ui/loader`, v0.8.0) is the ninja-panda karate loop
+(transparent animated WebP in `assets/loader/`) for every loading state.
+`useDelayedLoading(loading)` holds the flash guards — nothing shows for loads
+under 300 ms, and once shown it stays ≥600 ms — so render `<SuiteLoader>` from
+the hook's value, never from the raw flag. `<SuiteLoader size label>` is the
+animation (static poster under `prefers-reduced-motion`); `<PandaPull
+progress refreshing>` is the mobile pull-to-refresh indicator, scrubbing the
+loop with pull distance and playing it while the refresh is in flight — the
+app owns the gesture, the component renders the character. Assets import as
+static files, so Next's `transpilePackages` setup covers them.
+
 Each app also needs:
 
 - **Tailwind:** `@import "@comedia/design-system/ui.css";` after the theme, so Tailwind generates the classes these files use.

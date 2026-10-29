@@ -1,6 +1,6 @@
 {
   "name": "@comedia/design-system",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "private": true,
   "description": "The Comedia suite's design tokens and shared UI (shadcn components, the app switcher), generated from and kept in step with the Comedia Suite Design System Figma library.",
   "type": "module",
@@ -23,6 +23,7 @@
     },
     "./tokens.json": "./dist/tokens.json",
     "./ui/*": "./ui/*.tsx",
+    "./assets/*": "./assets/*",
     "./suite": "./suite/index.ts",
     "./suite/apps": "./suite/apps.ts",
     "./lib/utils": "./lib/utils.ts",
@@ -37,6 +38,7 @@
     "suite",
     "lib",
     "hooks",
+    "assets",
     "ui.css",
     "README.md"
   ],
