@@ -61,6 +61,16 @@ import { AppSwitcher, suiteApps, PRODUCTION_URLS } from '@comedia/design-system/
 import { cn } from '@comedia/design-system/lib/utils';
 ```
 
+**The floating format toolbar** (`ui/floating-toolbar`, v0.7.0) is the pill
+that appears over a text selection in anything editable — Mail's composer,
+Slides' edit-in-place. It exports the surface (`FloatingToolbar`,
+`ToolbarButton`, `ToolbarDivider`, `FloatingLinkInput`, the icons) and the
+when-and-where (`useSelectionToolbar` + `closestEditable`); what the buttons
+*do* stays per app, because Mail writes real HTML while Slides folds edits to
+its plain-text markup. Unlike the shadcn set it is self-contained — inline
+styles over the tokens with resolved fallbacks — so it needs no `ui.css`
+entry and works before an app adopts `theme.css`.
+
 Each app also needs:
 
 - **Tailwind:** `@import "@comedia/design-system/ui.css";` after the theme, so Tailwind generates the classes these files use.
