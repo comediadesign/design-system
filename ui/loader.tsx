@@ -14,9 +14,12 @@
  *   loader from this hook's value, never from the raw loading flag.
  * - `<SuiteLoader>` — the animation itself, with a static poster frame for
  *   prefers-reduced-motion.
- * - `<PandaPull>` — the pull-to-refresh indicator for mobile: scrubs the loop
- *   with pull progress, plays it while refreshing. The host owns the gesture;
- *   this renders the character.
+ * - `<PandaPull>` — the pull-to-refresh indicator for mobile: the panda in
+ *   front of a brushed rising sun, feet on a brush stroke, kicks breaking out
+ *   past the rim. Scrubs the loop with pull progress, plays it while
+ *   refreshing. The host owns the gesture; this renders the character. The
+ *   sun is opaque behind his head and body, so his edges sit on paint, not on
+ *   the app background — that is what keeps the dark-UI halo away.
  */
 
 import * as React from 'react';
@@ -25,11 +28,13 @@ import panda200 from '../assets/loader/panda-200.webp';
 import panda120 from '../assets/loader/panda-120.webp';
 import poster200 from '../assets/loader/panda-poster-200.png';
 import poster120 from '../assets/loader/panda-poster-120.png';
-import strip120 from '../assets/loader/panda-strip-120.webp';
+import pullStrip from '../assets/loader/panda-pull.webp';
 
-const STRIP_FRAMES = 32;
-const STRIP_FRAME_W = 144;
-const STRIP_FRAME_H = 120;
+// The full 4s loop, one frame per strip cell, at 192px tall: sharp at 56px on
+// a 3x screen with headroom. Played at LOOP_FPS it runs at the clip's speed.
+const STRIP_FRAMES = 63;
+const STRIP_FRAME_W = 217;
+const STRIP_FRAME_H = 193;
 const LOOP_FPS = 16;
 
 function assetSrc(a: string | { src: string }): string {
@@ -148,7 +153,7 @@ export function PandaPull({ progress, refreshing = false, size = 56, className, 
       style={{
         width: w,
         height: h,
-        backgroundImage: `url(${assetSrc(strip120)})`,
+        backgroundImage: `url(${assetSrc(pullStrip)})`,
         backgroundSize: `${w * STRIP_FRAMES}px ${h}px`,
         backgroundPosition: `${-frame * w}px 0`,
         backgroundRepeat: 'no-repeat',

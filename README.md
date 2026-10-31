@@ -77,9 +77,12 @@ entry and works before an app adopts `theme.css`.
 under 300 ms, and once shown it stays ≥600 ms — so render `<SuiteLoader>` from
 the hook's value, never from the raw flag. `<SuiteLoader size label>` is the
 animation (static poster under `prefers-reduced-motion`); `<PandaPull
-progress refreshing>` is the mobile pull-to-refresh indicator, scrubbing the
-loop with pull distance and playing it while the refresh is in flight — the
-app owns the gesture, the component renders the character. Assets import as
+progress refreshing>` is the mobile pull-to-refresh indicator — since v0.9.0
+the panda in front of a brushed rising sun, feet on a brush stroke, kicks
+breaking out past the rim — scrubbing the loop with pull distance and playing
+it while the refresh is in flight. The app owns the gesture, the component
+renders the character. Under reduced motion the scrub still tracks the finger
+(it is user-driven) and refreshing becomes a gentle pulse on a still frame. Assets import as
 static files, so Next's `transpilePackages` setup covers them.
 
 Each app also needs:
