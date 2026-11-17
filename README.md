@@ -85,6 +85,18 @@ renders the character. Under reduced motion the scrub still tracks the finger
 (it is user-driven) and refreshing becomes a gentle pulse on a still frame. Assets import as
 static files, so Next's `transpilePackages` setup covers them.
 
+**Comment threads** (`ui/comments`, v0.10.0) are Slides' comments, lifted so
+Patterns' teardowns use the same ones: `ThreadView` (a thread with replies,
+resolve, edit and delete on your own, reactions), `NewThreadView`,
+`CommentComposer` (Enter sends, `@` mentions), `CommentAvatar`,
+`AvatarStack`, `MentionText`, and the pure helpers (`threadsOf`,
+`threadNumbers`, `isThreadUnread`, `mentionsIn`, `namesFor`, `personName`,
+`timeLabel`). The storage stays in each app: map your rows to `SuiteComment`
+and pass `ThreadActions` that call your own server actions; an action you
+leave out hides its button. `variant="card"` is Slides' floating card;
+`variant="plain"` drops the rules and header row for pages that build
+hierarchy from type and space. Pins, panels and sign-in stay per app.
+
 Each app also needs:
 
 - **Tailwind:** `@import "@comedia/design-system/ui.css";` after the theme, so Tailwind generates the classes these files use.
@@ -131,6 +143,7 @@ Every app keeps the same components, spacing and type. Only the overridden token
 
 ## Versions
 
+- **v0.10.0**: `ui/comments`, the comment threads from Slides, with no deck code left in: Slides and Patterns share the surface and keep their own tables and actions.
 - **v0.6.0**: the colour cleanup (Figma: Colour cleanup page). 54 primitives become 31: near-identical greys, yellows, blues, off-whites and white steps merged; the greys renumbered in order. Badges follow one rule, a status colour at 15% behind text in that colour, with their own tokens (`--color-badge-<kind>-bg/-fg`); `pink/300` (#FF6BA6) is the reminder text so it passes contrast. Clearer CSS names: `--color-accent-star`, `--color-accent-active`, `--color-danger`, `--color-accent-unread`, `--color-accent-send`, `--color-row-hover`, `--color-row-band`, `--color-text-on-yellow`. The old names still work for this release (`tokens/deprecated.json`) and go in v0.7. Links, the unread dot and "cold" now use the accent blues; surface is the shell; the send button is gold.
 - **v0.5.1**: two React lint fixes from Slides: `useIsMobile` reads the media query through `useSyncExternalStore` (no effect, no first-render flash), and the sidebar skeleton's random width is fixed once with `useState`.
 - **v0.5.0**: five colours the apps hard-coded are now tokens, added in Figma: `--color-nav-pill` (the desktop nav pill, #D9D9D9 at 5% over the panel), `--color-nav-pill-phone`, `--color-menu` (the switcher's menu and the mark's disc), `--color-account` (the account initial) and `--color-text-warm` (the Comedia mark, email bodies). The app switcher uses them.
